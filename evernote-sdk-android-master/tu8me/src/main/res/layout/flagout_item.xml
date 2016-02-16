@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/flag_outitemimg"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/flag_outitemtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/flag_outitemimg"
+            android:paddingLeft="10dp"
+            android:text="鞋子鞋子鞋子鞋子鞋子鞋子"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/flag_outitemtext"
+            android:layout_below="@id/flag_outitemtext"
+            android:padding="10dp"
+            android:text="$100"
+            android:textColor="@color/colorpinkred"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/delprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/price"
+            android:layout_toRightOf="@id/price"
+            android:padding="10dp"
+            android:text="$100"
+            android:textSize="14dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/line"
+            android:layout_alignLeft="@id/delprice"
+            android:layout_alignBottom="@id/delprice"
+            android:layout_toRightOf="@id/delprice"
+            android:layout_marginBottom="18dp"/>
+      <!--  <View
+            android:layout_width="20dp"
+            android:layout_height="0.3dp"
+            android:layout_alignBaseline="@id/price"
+            android:layout_alignRight="@id/delprice"
+            android:layout_alignTop="@id/delprice"
+            android:layout_toRightOf="@id/price"
+            android:background="#000000" />-->
+    </RelativeLayout>
+</RelativeLayout>

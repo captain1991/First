@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    >
+<net.sourceforge.simcpux.view.PanelView
+    android:layout_gravity="center_horizontal"
+    android:id="@+id/panel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#87A1B8"/>
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progressDrawable="@drawable/scrubber_progress_horizontal_holo_light"
+        android:thumb="@drawable/scrubber_control_selector_holo"
+        android:max="100"
+        android:layout_marginRight="10dp"
+        android:progress="25"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+    <!--<net.sourceforge.simcpux.view.StatelLiteView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@drawable/home_topmenu_leftbtn"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home_topmenu_leftbtn"/>
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/forward_f"/>
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/follow_s"/>
+
+    </net.sourceforge.simcpux.view.StatelLiteView>-->
+    <net.sourceforge.simcpux.view.BerView
+        android:layout_width="match_parent"
+        android:layout_height="400dp" />
+    </RelativeLayout>
+</LinearLayout>

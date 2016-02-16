@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="淘优吧"
+                android:textColor="#ffffff"
+                android:textSize="22sp" />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/content_main" />
+            <RelativeLayout
+                android:id="@+id/share_layout"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="bottom|end"
+                android:background="#ffffff">
+                <ImageView
+                    android:id="@+id/wx_frend"
+                    android:layout_width="70dp"
+                    android:layout_height="100dp"
+                    android:padding="13dp"
+                    android:clickable="true"
+                    android:onClick="share"
+                    android:src="@drawable/icon48_appwx_logo"/>
+
+                <ImageView
+                    android:id="@+id/wx_moments"
+                    android:layout_width="70dp"
+                    android:layout_height="100dp"
+                    android:padding="5dp"
+                    android:clickable="true"
+                    android:onClick="share"
+                    android:layout_toRightOf="@id/wx_frend"
+                    android:src="@drawable/icon_res_download_moments"/>
+                <ImageView
+                    android:id="@+id/wx_collect"
+                    android:layout_width="70dp"
+                    android:layout_height="100dp"
+                    android:padding="5dp"
+                    android:clickable="true"
+                    android:onClick="share"
+                    android:layout_toRightOf="@id/wx_moments"
+                    android:src="@drawable/icon_res_download_collect"/>
+                <ImageView
+                    android:id="@+id/qq_friend"
+                    android:layout_width="70dp"
+                    android:layout_height="100dp"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:onClick="share"
+                    android:layout_toRightOf="@id/wx_collect"
+                    android:src="@drawable/qqfriend"/>
+
+            </RelativeLayout>
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+                android:src="@android:drawable/ic_dialog_email" />
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <LinearLayout
+            android:id="@+id/left_drawer_layout"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="#fffafa"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_dark"
+                android:padding="10dp"
+                android:text="全部商品分类"
+                android:textColor="#ffffff"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/chiep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="淘优惠"
+                android:onClick="leftClick"
+                android:clickable="true"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/text_girl_shoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:text="女鞋控"
+                android:onClick="leftClick"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/package_gril"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="包包"
+                android:onClick="leftClick"
+                android:clickable="true"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/neiyi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:text="内衣秀"
+                android:onClick="leftClick"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/text_huazhuangpin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="化妆品"
+                android:onClick="leftClick"
+                android:clickable="true"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </android.support.v4.widget.DrawerLayout>
+</android.support.design.widget.CoordinatorLayout>

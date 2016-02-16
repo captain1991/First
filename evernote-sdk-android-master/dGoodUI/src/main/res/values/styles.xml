@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <style name="refresh_progressbar">
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:indeterminateDrawable">@drawable/general__shared__loading</item>
+        <item name="android:indeterminateDuration">2000</item>
+        <item name="android:indeterminateBehavior">repeat</item>
+    </style>
+    
+</resources>
